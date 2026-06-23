@@ -1,0 +1,24 @@
+.text{
+    font-size: 25px;
+    margin: 0;
+    line-height: 130%;
+    cursor: default;
+}
+
+.textHighlight{
+    font-size: 25px;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.textBox{
+    width: fit-content;
+    margin-top: 25px;
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+    background: transparent;
+    box-shadow: inset 7px 7px 15px #282b2e,
+            inset -7px -7px 15px #363a3e;
+    padding:25px;
+}
