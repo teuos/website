@@ -3,7 +3,7 @@ import "../css/Portfolio.css";
 const projects = [
   {
     title: "teuos.net",
-    indev: true,
+    indev: false,
     type: "Website",
     description: "My personal portfolio website built with React and Vite.",
     tags: ["React", "Vite", "CSS"],
