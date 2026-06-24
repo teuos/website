@@ -14,7 +14,7 @@ function Home() {
 
         <div className="hero-content">
             <h1>Hey, my name is&nbsp;<span 
-                className='highlight'
+                className='textHighlightTitle'
                 onMouseEnter={() => setName("also known as teuos")}
                 onMouseLeave={() => setName("Aidan McLaughlin")}
                 >

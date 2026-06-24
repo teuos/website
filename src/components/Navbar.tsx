@@ -60,7 +60,7 @@ function Navbar() {
       <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
         <div className="logo-section">
           <span className="logo-text">
-            <span className="highlight">teuos</span>.net
+            <NavLink to="/"><span className="highlight">teuos</span>.net</NavLink>
           </span>
         </div>
 

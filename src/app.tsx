@@ -5,11 +5,12 @@ import Footer from "./components/Footer"
 import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
 import Socials from "./pages/socials";
+import DevHeader from "./components/DevHeader";
 
 function App() {
   return (
     <>
-      
+      <DevHeader />
       <Navbar />
       <ScrollToTop />
       
