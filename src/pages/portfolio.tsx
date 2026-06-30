@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../css/Portfolio.css";
 
 const projects = [
@@ -38,6 +39,30 @@ const projects = [
 ];
 
 function Portfolio() {
+
+  useEffect(() => {
+    const tiles = document.querySelectorAll(".project-tile");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("project-tile-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    tiles.forEach((tile) => observer.observe(tile));
+
+    return () => observer.disconnect();
+  }, []);
+
+
   return (
     <main className="portfolio-page">
       <section className="portfolio-header">
@@ -48,8 +73,8 @@ function Portfolio() {
       </section>
 
       <section className="portfolio-grid">
-        {projects.map((project) => (
-          <article className="project-tile" key={project.title}>
+        {projects.map((project, index) => (
+          <article className="project-tile" key={project.title} style={{ transitionDelay: `${index * 120}ms` }}>
             <div className="project-tile-content">
               <div className="project-labels">
                 <span className="project-type">{project.type}</span>

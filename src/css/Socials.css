@@ -1,9 +1,9 @@
 .socials-page {
-  background: #f4f4f4;
+  background: var(--page-bg);
 }
 
 .socials-header {
-  background: white;
+  background: var(--section-bg);
   min-height: 45vh;
   padding: 140px 32px 80px;
 
@@ -21,12 +21,12 @@
 .socials-header-content h1 {
   font-size: 56px;
   margin: 0 0 16px;
-  color: #111;
+  color: var(--text-main);
 }
 
 .socials-header-content p {
   font-size: 22px;
-  color: #555;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -74,14 +74,14 @@
 .socials-tile h2 {
   font-size: 32px;
   margin: 0;
-  color: white;
+  color: var(--social-card-header);
 }
 
 .socials-tile p {
   font-size: 15px;
   margin: 0;
   top: 0;
-  color: white;
+  color: var(--social-card-sub);
 }
 
 @media (max-width: 1140px) {

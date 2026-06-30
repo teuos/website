@@ -1,9 +1,9 @@
 .portfolio-page {
-  background: #f4f4f4;
+  background: var(--page-bg);
 }
 
 .portfolio-header {
-  background: white;
+  background: var(--section-bg);
   min-height: 45vh;
   padding: 140px 32px 80px;
 
@@ -21,12 +21,12 @@
 .portfolio-header-content h1 {
   font-size: 56px;
   margin: 0 0 16px;
-  color: #111;
+  color: var(--text-main);
 }
 
 .portfolio-header-content p {
   font-size: 22px;
-  color: #555;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -41,16 +41,28 @@
 }
 
 .project-tile {
-  background: white;
+  background: var(--card-bg);
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--project-tile-shadow);
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    box-shadow 0.25s ease;
 }
 
-.project-tile:hover {
+.project-tile-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-tile.project-tile-visible:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--project-tile-shadow-hover);
 }
 
 .project-tile img {
@@ -66,13 +78,13 @@
 .project-tile h2 {
   font-size: 32px;
   margin: 0 0 12px;
-  color: #111;
+  color: var(--text-main);
 }
 
 .project-tile p {
   font-size: 17px;
   line-height: 1.6;
-  color: #555;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -84,8 +96,8 @@
 }
 
 .project-tags span {
-  background: #f1f1f1;
-  color: #333;
+  background: var(--project-tags-bg);
+  color: var(--project-tags-text);
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 14px;
@@ -102,8 +114,8 @@
   padding: 12px 18px;
   border-radius: 999px;
 
-  background: #111;
-  color: white;
+  background: var(--project-actions-bg);
+  color: var(--project-actions-text);
 
   font-size: 15px;
   font-weight: bold;
@@ -138,13 +150,13 @@
 }
 
 .project-type {
-  background: #e9efff;
-  color: #0e3a8d;
+  background: var(--project-type-bg);
+  color: var(--project-type-text);
 }
 
 .project-indev {
-  background: #fff3cd;
-  color: #8a5a00;
+  background: var(--project-indev-bg);
+  color: var(--project-indev-text);
 }
 
 @media (max-width: 768px) {

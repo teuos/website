@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
-function Navbar() {
+type NavbarProps = {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+
+function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -68,12 +75,29 @@ function Navbar() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/portfolio">Portfolio</NavLink>
           <NavLink to="/socials">Socials</NavLink>
+
+          <button 
+            className={`dark-mode-button ${darkMode ? "dark" : ""}`}
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle dark mode"
+            >
+            <span className="sun-core"></span>
+            <span className="sun-dot dot-1"></span>
+            <span className="sun-dot dot-2"></span>
+            <span className="sun-dot dot-3"></span>
+            <span className="sun-dot dot-4"></span>
+            <span className="sun-dot dot-5"></span>
+            <span className="sun-dot dot-6"></span>
+            <span className="sun-dot dot-7"></span>
+            <span className="sun-dot dot-8"></span>
+          </button>
+
         </div>
 
         <button
           className={`mobile-menu-button ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation menu"
+          aria-label="Toggle navigation menu"  
         >
           <span></span>
           <span></span>
@@ -81,10 +105,29 @@ function Navbar() {
         </button>
       </nav>
 
+      
+
       <div className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/portfolio">Portfolio</NavLink>
         <NavLink to="/socials">Socials</NavLink>
+
+        <button 
+            className={`dark-mode-button ${darkMode ? "dark" : ""}`}
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle dark mode"
+            >
+            <span className="sun-core"></span>
+            <span className="sun-dot dot-1"></span>
+            <span className="sun-dot dot-2"></span>
+            <span className="sun-dot dot-3"></span>
+            <span className="sun-dot dot-4"></span>
+            <span className="sun-dot dot-5"></span>
+            <span className="sun-dot dot-6"></span>
+            <span className="sun-dot dot-7"></span>
+            <span className="sun-dot dot-8"></span>
+          </button>
+
       </div>
     </>
   );

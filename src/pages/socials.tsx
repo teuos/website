@@ -69,9 +69,11 @@ function Socials() {
           <a
             className="socials-tile"
             key={social.id}
-            href={social.url}
-            target="_blank"
-            rel="noreferrer"
+            {...(social.url ? {
+              href : social.url,
+              target : "_blank",
+              rel : "noreferrer",
+            } : {})}
             style={{ background: social.background }}
           >
             <div className="socials-tile-content">
