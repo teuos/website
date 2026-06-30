@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../css/Socials.css"
 
 const socials = [
@@ -54,6 +55,29 @@ const socials = [
 
 function Socials() {
 
+  useEffect(() => {
+      const tiles = document.querySelectorAll(".socials-tile");
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("socials-tile-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.05,
+          rootMargin: "0px 0px -20px 0px",
+        }
+      );
+  
+      tiles.forEach((tile) => observer.observe(tile));
+  
+      return () => observer.disconnect();
+    }, []);
+
 
   return (
     <main className="socials-page">
@@ -65,7 +89,7 @@ function Socials() {
       </section>
 
       <section className="socials-grid">
-        {socials.map((social) => (
+        {socials.map((social, index) => (
           <a
             className="socials-tile"
             key={social.id}
@@ -74,7 +98,7 @@ function Socials() {
               target : "_blank",
               rel : "noreferrer",
             } : {})}
-            style={{ background: social.background }}
+            style={{ background: social.background, transitionDelay: `${index * 40}ms` }}
           >
             <div className="socials-tile-content">
               <img

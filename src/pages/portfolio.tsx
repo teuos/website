@@ -53,7 +53,8 @@ function Portfolio() {
         });
       },
       {
-        threshold: 0.15,
+        threshold: 0.05,
+        rootMargin: "0px 0px -40px 0px",
       }
     );
 
@@ -74,7 +75,7 @@ function Portfolio() {
 
       <section className="portfolio-grid">
         {projects.map((project, index) => (
-          <article className="project-tile" key={project.title} style={{ transitionDelay: `${index * 120}ms` }}>
+          <article className="project-tile" key={project.title} style={{ transitionDelay: `${index * 60}ms` }}>
             <div className="project-tile-content">
               <div className="project-labels">
                 <span className="project-type">{project.type}</span>

@@ -37,7 +37,7 @@
   padding: 80px 32px;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
@@ -48,10 +48,21 @@
   min-height: 180px;
   text-decoration: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    box-shadow 0.25s ease;
 }
 
-.socials-tile:hover {
+.socials-tile-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.socials-tile-visible:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
 }
