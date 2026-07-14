@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
     <section className="hero">
-        <img className="hero-video" src={heroPhoto} alt="Hero image" />
+        <img className="hero-video" src="https://images.teuos.net/hero-image.jpg" alt="Hero image" />
 
         <div className="hero-overlay"></div>
 
