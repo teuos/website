@@ -1,2 +1,4 @@
 ./node_moduals
 ./src/assets/hero-image.jpg
+./public/social-icons
+./.env.local
