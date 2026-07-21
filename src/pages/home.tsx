@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import heroPhoto from "../assets/hero-image.jpg"
 
 function Home() {
 

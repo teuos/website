@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
 import Socials from "./pages/socials";
+import TurnstileTest from "./pages/turnstile-test";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/socials" element={<Socials />} />
+          <Route path="/turnstile-test" element={<TurnstileTest />} />
         </Routes>
       </main>
 

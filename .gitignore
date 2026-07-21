@@ -1,4 +1,8 @@
-./node_moduals
-./src/assets/hero-image.jpg
-./public/social-icons
-./.env.local
+node_modules/
+dist/
+.wrangler/
+.env
+.env.local
+.env.*.local
+src/assets/hero-image.jpg
+public/social-icons/
