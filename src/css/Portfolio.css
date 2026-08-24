@@ -1,8 +1,10 @@
 .portfolio-page {
+  transition: background-color 0.45s ease;
   background: var(--page-bg);
 }
 
 .portfolio-header {
+  transition: background-color 0.45s ease;
   background: var(--section-bg);
   min-height: 45vh;
   padding: 140px 32px 80px;
@@ -19,12 +21,14 @@
 }
 
 .portfolio-header-content h1 {
+  transition: color 0.45s ease;
   font-size: 56px;
   margin: 0 0 16px;
   color: var(--text-main);
 }
 
 .portfolio-header-content p {
+  transition: color 0.45s ease;
   font-size: 22px;
   color: var(--text-muted);
   margin: 0;
@@ -50,8 +54,9 @@
   transform: translateY(40px);
 
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease,
+    background-color 0.45s ease,
+    opacity 0.6s ease var(--enter-delay, 0ms),
+    transform 0.6s ease var(--enter-delay, 0ms),
     box-shadow 0.25s ease;
 }
 
@@ -76,12 +81,14 @@
 }
 
 .project-tile h2 {
+  transition: color 0.45s ease;
   font-size: 32px;
   margin: 0 0 12px;
   color: var(--text-main);
 }
 
 .project-tile p {
+  transition: color 0.45s ease;
   font-size: 17px;
   line-height: 1.6;
   color: var(--text-muted);
@@ -96,6 +103,7 @@
 }
 
 .project-tags span {
+  transition: background-color 0.45s ease, color 0.45s ease;
   background: var(--project-tags-bg);
   color: var(--project-tags-text);
   padding: 6px 10px;
@@ -119,7 +127,7 @@
 
   font-size: 15px;
   font-weight: bold;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.45s ease, color 0.45s ease, transform 0.2s ease;
 }
 
 .project-actions a:hover {
@@ -150,11 +158,13 @@
 }
 
 .project-type {
+  transition: background-color 0.45s ease, color 0.45s ease;
   background: var(--project-type-bg);
   color: var(--project-type-text);
 }
 
 .project-indev {
+  transition: background-color 0.45s ease, color 0.45s ease;
   background: var(--project-indev-bg);
   color: var(--project-indev-text);
 }

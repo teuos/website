@@ -1,8 +1,10 @@
 .socials-page {
+  transition: background-color 0.45s ease;
   background: var(--page-bg);
 }
 
 .socials-header {
+  transition: background-color 0.45s ease;
   background: var(--section-bg);
   min-height: 45vh;
   padding: 140px 32px 80px;
@@ -19,12 +21,14 @@
 }
 
 .socials-header-content h1 {
+  transition: color 0.45s ease;
   font-size: 56px;
   margin: 0 0 16px;
   color: var(--text-main);
 }
 
 .socials-header-content p {
+  transition: color 0.45s ease;
   font-size: 22px;
   color: var(--text-muted);
   margin: 0;
@@ -43,6 +47,7 @@
 
 
 .socials-tile {
+  transition: background-color 0.45s ease;
   border-radius: 28px;
   overflow: hidden;
   min-height: 180px;
