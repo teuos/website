@@ -88,7 +88,7 @@ body.dark-mode {
   align-items: center;
 }
 
-.hero-video {
+.hero-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,6 +96,14 @@ body.dark-mode {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+
+}
+
+.hero-image.visible {
+  opacity: 1;
 }
 
 .hero-overlay {
