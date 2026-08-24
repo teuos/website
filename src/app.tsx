@@ -25,7 +25,7 @@ function App() {
 
       <main className="page">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/socials" element={<Socials />} />
           <Route path="/turnstile-test" element={<TurnstileTest />} />

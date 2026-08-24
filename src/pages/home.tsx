@@ -1,13 +1,23 @@
 import { useState } from 'react';
 
-function Home() {
+function Home({ darkMode }: { darkMode: boolean }) {
 
   const [name, setName] = useState("Aidan McLaughlin");
 
   return (
     <>
     <section className="hero">
-        <img className="hero-video" src="https://images.teuos.net/hero-image.jpg" alt="Hero image" />
+        <img
+            className={`hero-image hero-image-dark ${darkMode ? "visible" : ""}`}
+            src="https://images.teuos.net/hero-image.jpg"
+            alt="Hero image dark"
+        />
+
+        <img
+            className={`hero-image hero-image-light ${!darkMode ? "visible" : ""}`}
+            src="https://images.teuos.net/hero-image-light.jpg"
+            alt="Hero image light"
+        />
 
         <div className="hero-overlay"></div>
 
