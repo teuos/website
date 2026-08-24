@@ -7,6 +7,13 @@ import Home from "./pages/home";
 import Portfolio from "./pages/portfolio";
 import Socials from "./pages/socials";
 import TurnstileTest from "./pages/turnstile-test";
+import "react";
+
+declare module "react" {
+  interface CSSProperties {
+    [key: `--${string}`]: string | number;
+  }
+}
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {

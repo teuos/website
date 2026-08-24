@@ -75,7 +75,7 @@ function Portfolio() {
 
       <section className="portfolio-grid">
         {projects.map((project, index) => (
-          <article className="project-tile" key={project.title} style={{ transitionDelay: `${index * 60}ms` }}>
+          <article className="project-tile" key={project.title} style={{ "--enter-delay": `${index * 60}ms` }}>
             <div className="project-tile-content">
               <div className="project-labels">
                 <span className="project-type">{project.type}</span>

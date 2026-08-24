@@ -98,7 +98,7 @@ body.dark-mode {
   z-index: 0;
 
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
 
 }
 
@@ -134,6 +134,7 @@ body.dark-mode {
 }
 
 .intro-section {
+  transition: background-color 0.45s ease, color 0.45s ease;
   background: var(--section-bg);
   color: var(--text-main);
   padding: 80px 32px;
@@ -151,6 +152,7 @@ body.dark-mode {
 }
 
 .intro-content p {
+  transition: color 0.45s ease;
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-muted);
