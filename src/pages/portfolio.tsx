@@ -66,6 +66,7 @@ function Portfolio() {
 
   return (
     <main className="portfolio-page">
+      <title>Portfolio | teuos.net</title>
       <section className="portfolio-header">
         <div className="portfolio-header-content">
           <h1><span className="highlight">Portfolio</span></h1>
