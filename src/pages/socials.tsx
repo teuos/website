@@ -81,6 +81,7 @@ function Socials() {
 
   return (
     <main className="socials-page">
+      <title>Socials | teuos.net</title>
       <section className="socials-header">
         <div className="socials-header-content">
           <h1><span className="highlight">Socials</span></h1>
