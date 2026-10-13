@@ -11,6 +11,14 @@ const siteName = getSiteName();
 
 const projects = [
   {
+    title: "StrathClean",
+    indev: false,
+    type: "Mobile App",
+    description: "StrathHack26 Challenge",
+    tags: ["Dart", "Java", "Flutter", "Spring boot"],
+    githubUrl: "https://github.com/teuos/StrathClean",
+  },
+  {
     title: "teuos.net",
     indev: false,
     type: "Website",
