@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import "../css/Portfolio.css";
 
+function getSiteName() {
+  const host = window.location.hostname.replace(/^www\./, "");
+  if (host.endsWith("aidanmcl.net")) return "aidanmcl";
+  return "teuos";
+}
+
+const siteName = getSiteName();
+
 const projects = [
   {
     title: "teuos.net",
@@ -66,7 +74,7 @@ function Portfolio() {
 
   return (
     <main className="portfolio-page">
-      <title>Portfolio | teuos.net</title>
+      <title>Portfolio | {siteName}.net</title>
       <section className="portfolio-header">
         <div className="portfolio-header-content">
           <h1><span className="highlight">Portfolio</span></h1>
