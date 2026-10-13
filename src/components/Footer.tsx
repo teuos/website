@@ -1,10 +1,18 @@
+function getSiteName() {
+  const host = window.location.hostname.replace(/^www\./, "");
+  if (host.endsWith("aidanmcl.net")) return "aidanmcl";
+  return "teuos";
+}
+
+const siteName = getSiteName();
+
 function Footer() {
 
     return (
         <footer className="footer">
             <div className="footer-content">
                 <div>
-                  <h3 className="footer-logo">teuos.net</h3>
+                  <h3 className="footer-logo">{siteName}.net</h3>
                 </div>
 
                 <div className="footer-links">

@@ -1,8 +1,12 @@
-import { useState } from 'react';
+function getSiteName() {
+  const host = window.location.hostname.replace(/^www\./, "");
+  if (host.endsWith("aidanmcl.net")) return "Aidan McLaughlin";
+  return "teuos";
+}
+
+const siteName = getSiteName();
 
 function Home({ darkMode }: { darkMode: boolean }) {
-
-  const [name, setName] = useState("Aidan McLaughlin");
 
   return (
     <>
@@ -22,12 +26,9 @@ function Home({ darkMode }: { darkMode: boolean }) {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-            <h1>Hey, my name is&nbsp;<span 
-                className='textHighlightTitle'
-                onMouseEnter={() => setName("also known as teuos")}
-                onMouseLeave={() => setName("Aidan McLaughlin")}
-                >
-                        {name}&nbsp;
+            <h1>Hey, my name is&nbsp;
+                <span className='textHighlightTitle'>
+                        {siteName}&nbsp;
                 </span>
                 </h1>
             <p>I'm a software engineer and computer scientist.</p>

@@ -8,6 +8,14 @@ type NavbarProps = {
 };
 
 
+function getSiteName() {
+  const host = window.location.hostname.replace(/^www\./, "");
+  if (host.endsWith("aidanmcl.net")) return "aidanmcl";
+  return "teuos";
+}
+
+const siteName = getSiteName();
+
 function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,7 +75,7 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
       <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
         <div className="logo-section">
           <span className="logo-text">
-            <NavLink to="/"><span className="highlight">teuos</span>.net</NavLink>
+            <NavLink to="/"><span className="highlight">{siteName}</span>.net</NavLink>
           </span>
         </div>
 
