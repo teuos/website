@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import "../css/Socials.css"
 
+function getSiteName() {
+  const host = window.location.hostname.replace(/^www\./, "");
+  if (host.endsWith("aidanmcl.net")) return "aidanmcl";
+  return "teuos";
+}
+
+const siteName = getSiteName();
+
 const socials = [
   {
     id: "GitHub",
@@ -81,7 +89,7 @@ function Socials() {
 
   return (
     <main className="socials-page">
-      <title>Socials | teuos.net</title>
+      <title>Socials | {siteName}.net</title>
       <section className="socials-header">
         <div className="socials-header-content">
           <h1><span className="highlight">Socials</span></h1>
