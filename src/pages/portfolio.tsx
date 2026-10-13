@@ -15,7 +15,7 @@ const projects = [
     indev: false,
     type: "Mobile App",
     description: "StrathHack26 Challenge",
-    tags: ["Flutter", "Java", "Spring boot"],
+    tags: ["Dart", "Java", "Flutter", "Spring boot"],
     githubUrl: "https://github.com/teuos/StrathClean",
   },
   {
