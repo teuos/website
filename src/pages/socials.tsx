@@ -43,12 +43,12 @@ const socials = [
     background: "linear-gradient(135deg, #5865f2, #404eed)",
   },
   {
-    id: "Spotify",
-    title: "Spotify",
-    handle: "@aidanml06",
-    url: "https://open.spotify.com/user/aidanmcl06?si=20d07f57e7a54957",
-    icon:"/social-icon/spotify.svg",
-    background: "linear-gradient(135deg, #1DB954, #01a11c)",
+    id: "LinkedIn",
+    title: "LinkedIn",
+    handle: "Aidan McLaughlin",
+    url: "https://www.linkedin.com/in/aidan-mclaughlin-a456923ab/",
+    icon:"/social-icon/linkedin.svg",
+    background: "linear-gradient(135deg, #035bce, #054191)",
   },
   {
     id: "Snapchat",
