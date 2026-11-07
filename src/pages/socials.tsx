@@ -7,6 +7,22 @@ function getSiteName() {
   return "teuos";
 }
 
+// returns true if teuos.net
+function getPublicStatus() {
+  const host = window.location.hostname.replace(/^www\./, "");
+  if (host.endsWith("aidanmcl.net")) return false;
+  return true;
+}
+
+function getEmail(){
+  const host = window.location.hostname.replace(/^www\./, "");
+    if (host.endsWith("aidanmcl.net")) return "aidanmcl06@outlook.com";
+    return "teuossss@gmail.com";
+}
+
+const email = getEmail();
+
+const publicStatus = getPublicStatus();
 const siteName = getSiteName();
 
 const socials = [
@@ -21,8 +37,8 @@ const socials = [
   {
     id: "Email",
     title: "Email",
-    handle: "aidanmcl06@outlook.com",
-    url: "mailto:aidanmcl06@outlook.com?subject=Website%20Contact&body=Hi%20Aidan%2C%0A%0A",
+    handle: email,
+    url: `mailto:${email}?subject=Website%20Contact&body=Hi%20Aidan%2C%0A%0A`,
     icon:"/social-icon/email.svg",
     background: "linear-gradient(135deg, #6495ed, #0e3a8d)",
   },
@@ -33,6 +49,7 @@ const socials = [
     url: "https://www.instagram.com/aidanmcl06/",
     icon:"/social-icon/instagram.svg",
     background: "linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4)",
+    private: true,
   },
   {
     id: "Discord",
@@ -49,6 +66,7 @@ const socials = [
     url: "https://www.linkedin.com/in/aidan-mclaughlin-a456923ab/",
     icon:"/social-icon/linkedin.svg",
     background: "linear-gradient(135deg, #035bce, #054191)",
+    private: true,
   },
   {
     id: "Snapchat",
@@ -57,6 +75,7 @@ const socials = [
     url: "https://www.snapchat.com/add/aidanmcl06?share_id=GFEiPDYKeSE&locale=en-GB",
     icon:"/social-icon/snapchat.svg",
     background: "linear-gradient(135deg, #FFFC00, #e3e001)",
+    private: true,
   },
 ];
 
@@ -86,6 +105,7 @@ function Socials() {
       return () => observer.disconnect();
     }, []);
 
+    const visibleSocials = publicStatus ? socials.filter((social) => !social.private) : socials;
 
   return (
     <main className="socials-page">
@@ -98,7 +118,7 @@ function Socials() {
       </section>
 
       <section className="socials-grid">
-        {socials.map((social, index) => (
+        {visibleSocials.map((social, index) => (
           <a
             className="socials-tile"
             key={social.id}
