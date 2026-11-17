@@ -42,6 +42,8 @@ body {
   --project-type-text: #0e3a8d;
   --project-indev-bg: #fff3cd;
   --project-indev-text: #8a5a00;
+  --project-inprod-bg: #c4e2c9;
+  --project-inprod-text: #013f0a;
   --project-tile-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   --project-tile-shadow-hover: 0 18px 48px rgba(0, 0, 0, 0.18);
   --social-card-header: white;
@@ -62,6 +64,8 @@ body.dark-mode {
   --project-type-text: #e9efff;
   --project-indev-bg: #8a5a00;
   --project-indev-text: #fff3cd;
+  --project-inprod-bg: #013f0a;
+  --project-inprod-text: #c4e2c9;
   --project-tile-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   --project-tile-shadow-hover: 0 18px 48px rgba(0, 0, 0, 0.18);
 }
