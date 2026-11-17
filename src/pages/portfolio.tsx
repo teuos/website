@@ -13,6 +13,7 @@ const projects = [
   {
     title: "StrathClean",
     indev: false,
+    inprod: false,
     type: "Mobile App",
     description: "StrathHack26 Challenge",
     tags: ["Dart", "Java", "Flutter", "Spring boot"],
@@ -21,6 +22,7 @@ const projects = [
   {
     title: "teuos.net",
     indev: false,
+    inprod: true,
     type: "Website",
     description: "My personal portfolio website built with React and Vite.",
     tags: ["React", "Vite", "CSS"],
@@ -30,6 +32,7 @@ const projects = [
   {
     title: "Skyblock Plugin",
     indev: true,
+    inprod: false,
     type: "Minecraft Plugin",
     description: "A paper plugin project for Minecraft servers.",
     tags: ["Java", "Paper", "Minecraft"],
@@ -38,6 +41,7 @@ const projects = [
   {
     title: "ahfconstrucion.net",
     indev: true,
+    inprod: false,
     type: "Website",
     description: "A website for AFH Construction Managment company",
     tags: ["React", "Vite", "CSS"],
@@ -47,6 +51,7 @@ const projects = [
   {
     title: "ScotBank",
     indev: false,
+    inprod: false,
     type: "Full Stack Application",
     description: "A project made for a Uni course ran by JPMorgan",
     tags: ["React", "Java", "Jooby", "Maven"],
@@ -55,6 +60,7 @@ const projects = [
   {
     title: "Simple Shell",
     indev: false,
+    inprod: false,
     type: "Utility",
     description: "A simple shell written in C for linux",
     tags: ["C", "Linux"],
@@ -106,6 +112,9 @@ function Portfolio() {
                 <span className="project-type">{project.type}</span>
                 {project.indev && (
                   <span className="project-indev">In Dev</span>
+                )}
+                {project.inprod && (
+                  <span className="project-inprod">In Production</span>
                 )}
               </div>
 

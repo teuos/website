@@ -156,6 +156,19 @@
   font-weight: bold;
   line-height: 1;
 }
+.project-inprod {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 30px;
+  padding: 0 12px;
+
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+}
 
 .project-type {
   transition: background-color 0.45s ease, color 0.45s ease;
@@ -167,6 +180,11 @@
   transition: background-color 0.45s ease, color 0.45s ease;
   background: var(--project-indev-bg);
   color: var(--project-indev-text);
+}
+.project-inprod {
+  transition: background-color 0.45s ease, color 0.45s ease;
+  background: var(--project-inprod-bg);
+  color: var(--project-inprod-text);
 }
 
 @media (max-width: 768px) {
