@@ -45,6 +45,14 @@ const projects = [
     githubUrl: "https://github.com/teuos/ahfwebsite"
   },
   {
+    title: "ScotBank",
+    indev: false,
+    type: "Full Stack Application",
+    description: "A project made for a Uni course ran by JPMorgan",
+    tags: ["React", "Java", "Jooby", "Maven"],
+    githubUrl: "https://github.com/teuos/ScotBank"
+  },
+  {
     title: "Simple Shell",
     indev: false,
     type: "Utility",
